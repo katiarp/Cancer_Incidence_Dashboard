@@ -7,16 +7,16 @@ function init() {
         color: ['rgb(128, 0, 118)', 'rgb(	116, 214, 0)', 'rgb(253, 164, 0)']
       },
       type: "bar" }];
-    Plotly.newPlot("plot_bar", data);
+    Plotly.newPlot("plot_cc", data);
   }
   
   // Call updatePlotly() when a change takes place to the DOM
-  d3.selectAll("#selDataset").on("change", updatePlotly);
+  d3.selectAll("#selDataset1").on("change", updatePlotly);
   
   // This function is called when a dropdown menu item is selected
   function updatePlotly() {
     // Use D3 to select the dropdown menu
-    var dropdownMenu = d3.select("#selDataset");
+    var dropdownMenu = d3.select("#selDataset1");
     // Assign the value of the dropdown menu option to a variable
     var dataset = dropdownMenu.property("value");
   
@@ -31,12 +31,12 @@ function init() {
   
     else if (dataset === 'dataset2') {
       x = ["Stable", "Falling", "Rising"];
-      y = [2048, 2048, 2048];
+      y = [37, 37, 37];
     }
   
     // Note the extra brackets around 'x' and 'y'
-    Plotly.restyle("plot_bar", "x", [x]);
-    Plotly.restyle("plot_bar", "y", [y]);
+    Plotly.restyle("plot_cc", "x", [x]);
+    Plotly.restyle("plot_cc", "y", [y]);
   }
   
   init();

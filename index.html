@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Dashboard - SB Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+    <link href="static/css/styles.css" rel="stylesheet" />
+    <!-- <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script> -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+</head>
+
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <!-- Navbar Brand -->
+        <a class="navbar-brand ps-3" href="index.html">Cancer Prediction</a>
+        <!-- Sidebar Toggle-->
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
+                class="bi bi-list" style="font-size: 1.5rem"></i></button>
+        <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+        </ul>
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <div class="sb-sidenav-menu-heading"></div>
+                        <a class="nav-link" href="index.html">
+                            <div class="sb-nav-link-icon"><i class="bi bi-speedometer2"></i></div>
+                            Dashboard
+                        </a>
+                        <a class="nav-link" href="index_map.html">
+                            <div class="sb-nav-link-icon"><i class="bi bi-globe-americas"></i></div>
+                            Interactive Map
+                        </a>
+                        <a class="nav-link" href="index_project.html">
+                            <div class="sb-nav-link-icon"><i class="bi bi-kanban-fill"></i></div>
+                            Project Breakdown
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid px-4">
+                    <h1 class="mt-4">Cancer Incidence and Environmental Pollutants</h1>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    [Place Holder] Why we choose this project
+                                    A 2016 study out of Hong Kong, Cancer Mortality Risks From Long-term Exposure to
+                                    Ambient Fine Particle, showed that long-term exposure to pollution rates of PM2.5
+                                    (ambient fine particulate matter) is associated with a higher risk of cancer in
+                                    various organs. In fact, the study showed that every 10 µg/m3 of increased PM2.5
+                                    exposure increased the risk of dying from cancer by 22%.
+                                    While the cancer risk of air pollutants is considered a clear link, the link between
+                                    ozone exposure and cancer incidence isn't as straightforward. Studies show that
+                                    while ozone increases the risk of lung cancer, exposure does not increase the risk
+                                    or mortality of other cancers.
+                                    Our team's interest and experience in community health, and the environmental
+                                    concerns that affect it, are what led us to create this project. We have scaled the
+                                    data down to represent select counties in the United States.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <i class="fas fa-table me-1"></i>
+                                    DataTable Example
+                                </div>
+                                <div class="card-body">
+                                    <table id="datatablesSimple">
+                                        <thead>
+                                            <tr>
+                                                <th>FIPS</th>
+                                                <th>recent_trend'</th>
+                                                <th>PM25_max_pred</th>
+                                                <th>PM25_med_pred</th>
+                                                <th>PM25_mean_pred</th>
+                                                <th>O3_max_pred</th>
+                                                <th>O3_med_pred</th>
+                                                <th>O3_mean_pred</th>
+                                                <th>PM25_max_pred_2001</th>
+                                                <th>PM25_max_pred_2002</th>
+                                            </tr>
+                                        </thead>
+                                        <!-- <tfoot>
+                                            <tr>
+                                                <th>FIPS</th>
+                                                <th>recent_trend'</th>
+                                                <th>PM25_max_pred</th>
+                                                <th>PM25_med_pred</th>
+                                                <th>PM25_mean_pred</th>
+                                                <th>O3_max_pred</th>
+                                                <th>O3_med_pred</th>
+                                                <th>O3_mean_pred</th>
+                                                <th>PM25_max_pred_2001</th>
+                                                <th>PM25_max_pred_2002</th>
+                                            </tr>
+                                        </tfoot> -->
+                                        <!-- <tbody>
+                                            <tr>
+                                                <td>Place holder</td>
+                                                <td>Place holder</td>
+                                                <td>Place holder</td>
+                                                <td>Place holder</td>
+                                                <td>Place holder</td>
+                                                <td>Place holder</td>
+                                                <td>Place holder</td>
+                                                <td>Place holder</td>
+                                                <td>Place holder</td>
+                                                <td>Place holder</td>
+                                            </tr>
+                                        </tbody> -->
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <i class="fa-solid fa-globe"></i>
+                                    Pollution Data Scatter Plot
+                                </div>
+                                <!-- <div class="spinner-border text-dark" role="status">
+
+                                </div> -->
+
+                                <div id="plot" style="width: 100%"></div>
+
+                                <div class="card-footer small text-muted">EPA</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    [Place Holder] Why we choose this project
+                                    A 2016 study out of Hong Kong, Cancer Mortality Risks From Long-term Exposure to
+                                    Ambient Fine Particle, showed that long-term exposure to pollution rates of PM2.5
+                                    (ambient fine particulate matter) is associated with a higher risk of cancer in
+                                    various organs. In fact, the study showed that every 10 µg/m3 of increased PM2.5
+                                    exposure increased the risk of dying from cancer by 22%.
+                                    While the cancer risk of air pollutants is considered a clear link, the link between
+                                    ozone exposure and cancer incidence isn't as straightforward. Studies show that
+                                    while ozone increases the risk of lung cancer, exposure does not increase the risk
+                                    or mortality of other cancers.
+                                    Our team's interest and experience in community health, and the environmental
+                                    concerns that affect it, are what led us to create this project. We have scaled the
+                                    data down to represent select counties in the United States.
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <i class="bi bi-bar-chart-fill"></i>
+                                    Classes Before Resampling
+                                </div>
+                                <div class="card-body"><canvas id="myBarChart1" width="100%" height="40"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <i class="bi bi-bar-chart-fill"></i>
+                                    Classes After Resampling with SMOTE
+                                </div>
+                                <div class="card-body"><canvas id="myBarChart2" width="100%" height="40"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    [Place Holder] Why we choose this project
+                                    A 2016 study out of Hong Kong, Cancer Mortality Risks From Long-term Exposure to
+                                    Ambient Fine Particle, showed that long-term exposure to pollution rates of PM2.5
+                                    (ambient fine particulate matter) is associated with a higher risk of cancer in
+                                    various organs. In fact, the study showed that every 10 µg/m3 of increased PM2.5
+                                    exposure increased the risk of dying from cancer by 22%.
+                                    While the cancer risk of air pollutants is considered a clear link, the link between
+                                    ozone exposure and cancer incidence isn't as straightforward. Studies show that
+                                    while ozone increases the risk of lung cancer, exposure does not increase the risk
+                                    or mortality of other cancers.
+                                    Our team's interest and experience in community health, and the environmental
+                                    concerns that affect it, are what led us to create this project. We have scaled the
+                                    data down to represent select counties in the United States.
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <i class="bi bi-grid-3x3-gap-fill"></i>
+                                    Confusion Matrix SMOTE Resampling
+                                </div>
+                                <img src="static/images/confusion_matrix_SMOTE_Random_Forest.png" class="img-fluid"
+                                    alt="Confusion Matrix">
+                                <div class="card-body">
+                                    <p class="card-text"> SMOTE gave an accuracy of 36% </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-6">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <i class="bi bi-grid-3x3-gap-fill"></i>
+                                    Confusion Matrix Cluster Centroid Resampling
+                                </div>
+                                <img src="static/images/confusion_matrix_cluster_centroid_cluster_centroid.png"
+                                    class="img-fluid" alt="Confusion Matrix">
+                                <div class="card-body">
+                                    <p class="card-text"> Cluster Centroid gave an accuracy of 51% </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="py-4 bg-light mt-auto">
+                <div class="container-fluid px-4">
+                    <div class="d-flex align-items-center justify-content-between small">
+                        <div class="text-muted">Copyright &copy; Katia Paredes 2023</div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- <script src="https://kit.fontawesome.com/88b660a568.js" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="static/js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="static/js/bar_chart_smote.js"></script>
+    <script src="static/js/bar_chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+    <script src="static/js/datatables.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.1/d3.min.js"></script>
+    <script src="static/js/plots.js"></script>
+</body>
+
+</html>

@@ -7,7 +7,7 @@
 
 // // ____________________________________________________________-
 
-d3.json("https://storage.googleapis.com/kp-dashboard/PM15.json").then((importedData) => {
+d3.json("static/data/PM15.json").then((importedData) => {
   // console.log(importedData);
   var data = importedData;
 

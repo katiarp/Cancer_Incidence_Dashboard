@@ -1,25 +1,23 @@
-// window.addEventListener('DOMContentLoaded', event => {
-//     // Simple-DataTables
-//     // https://github.com/fiduswriter/Simple-DataTables/wiki
-
-//     const datatablesSimple = document.getElementById('datatablesSimple');
-//     if (datatablesSimple) {
-//         new simpleDatatables.DataTable(datatablesSimple);
-//     }
-// });
 d3.json("static/data/model_dataset.json").then((importedData) => {
-    // const datatablesSimple = document.getElementById('datatablesSimple');
-    // var dataTable;
-    // if (datatablesSimple) {
-    //     dataTable = new simpleDatatables.DataTable(datatablesSimple);
-    // }
-    const dataTable = new simpleDatatables.DataTable("#datatablesSimple",{
-        searchable:false,
-        sortable:false
+    var dataTable = new DataTable("#datatablesSimple", {
+        scrollX: true,
+        ordering: false,
+        searching: false,
+        data: importedData,
+        "columns" : [
+            { "data" : "FIPS" },
+            { "data" : "recent_trend" },
+            { "data" : "PM25_max_pred" },
+            { "data" : "PM25_med_pred" },
+            { "data" : "PM25_mean_pred" },
+            { "data" : "O3_max_pred" },
+            { "data" : "O3_med_pred" },
+            { "data" : "O3_mean_pred" },
+            { "data" : "PM25_max_pred_2001" },
+            { "data" : "PM25_max_pred_2002" },
+            { "data" : "PM25_max_pred_2003" },
+            { "data" : "PM25_max_pred_2004" },
+            { "data" : "PM25_max_pred_2005" },
+            { "data" : "PM25_max_pred_2006" }]
     });
-    
-    dataTable.insert(importedData);
-    // console.log("read csv");
-    //console.log(importedData);
-    // var data = importedData;
 });

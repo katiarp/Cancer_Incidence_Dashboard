@@ -3,6 +3,7 @@ d3.json("static/data/model_dataset.json").then((importedData) => {
         scrollX: true,
         ordering: false,
         searching: false,
+        lengthMenu: [5, 10, 25, 50, 75, 100 ],
         data: importedData,
         "columns" : [
             { "data" : "FIPS" },

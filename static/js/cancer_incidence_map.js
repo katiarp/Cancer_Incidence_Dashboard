@@ -37,7 +37,7 @@ let overlays = {
 // Create map object
 var myMap = L.map("map", {
   center: [39.0119, -98.4842],
-  zoom: 4.3, //4.2
+  zoom: 4.4,
   layers: [light, recentTrend]
 });
 

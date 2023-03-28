@@ -97,7 +97,7 @@
                             <div class="card mb-4">
                                 <div class="card-header">
                                     <i class="fas fa-table me-1"></i>
-                                    DataTable Example
+                                    Model Dataset Table
                                 </div>
                                 <div class="card-body" style="overflow-x: auto;">
                                     <table id="datatablesSimple">
@@ -146,9 +146,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-xl-6">
-                            <div class="card mb-4">
+                    <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+                        <div class="col">
+                            <div class="card h-100">
                                 <div class="card-header">
                                     <i class="bi bi-bar-chart-fill"></i>
                                     Oversampling with SMOTE
@@ -156,15 +156,31 @@
                                 <div id="plot_bar"></div>
 
                                 <select id="selDataset">
-                                  <option value="dataset1">Data Before Resampling</option>
-                                  <option value="dataset2">Data After Resampling</option>
+                                    <option value="dataset1">Data Before Resampling</option>
+                                    <option value="dataset2">Data After Resampling</option>
                                 </select>
                                 <!-- <div class="card-body"><canvas id="myBarChart1" width="100%" height="40"></canvas>
                                 </div> -->
                             </div>
                         </div>
-                        <div class="col-xl-6">
-                            <div class="card mb-4">
+                        <!-- <div class="row"> -->
+                        <div class="col">
+                            <div class="card h-100">
+                                <div class="card-header">
+                                    <i class="bi bi-grid-3x3-gap-fill"></i>
+                                    Confusion Matrix SMOTE Resampling
+                                </div>
+                                <img src="static/images/confusion_matrix_SMOTE_Random_Forest.png" class="img-fluid"
+                                    alt="Confusion Matrix">
+                                <div class="card-body">
+                                    <p class="card-text"> Accuracy of 36% </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+                        <div class="col">
+                            <div class="card h-100">
                                 <div class="card-header">
                                     <i class="bi bi-bar-chart-fill"></i>
                                     Undersampling with Cluster Centroid
@@ -172,11 +188,24 @@
                                 <div id="plot_cc"></div>
 
                                 <select id="selDataset1">
-                                  <option value="dataset1">Data Before Resampling</option>
-                                  <option value="dataset2">Data After Resampling</option>
+                                    <option value="dataset1">Data Before Resampling</option>
+                                    <option value="dataset2">Data After Resampling</option>
                                 </select>
                                 <!-- <div class="card-body"><canvas id="myBarChart2" width="100%" height="40"></canvas>
                                 </div> -->
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <div class="card-header">
+                                    <i class="bi bi-grid-3x3-gap-fill"></i>
+                                    Confusion Matrix Cluster Centroid Resampling
+                                </div>
+                                <img src="static/images/confusion_matrix_cluster_centroid_cluster_centroid.png"
+                                    class="img-fluid" alt="Confusion Matrix">
+                                <div class="card-body">
+                                    <p class="card-text"> Accuracy of 51% </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -198,35 +227,6 @@
                                     concerns that affect it, are what led us to create this project. We have scaled the
                                     data down to represent select counties in the United States.
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xl-6">
-                            <div class="card mb-4">
-                                <div class="card-header">
-                                    <i class="bi bi-grid-3x3-gap-fill"></i>
-                                    Confusion Matrix SMOTE Resampling
-                                </div>
-                                <img src="static/images/confusion_matrix_SMOTE_Random_Forest.png" class="img-fluid"
-                                    alt="Confusion Matrix">
-                                <div class="card-body">
-                                    <p class="card-text"> SMOTE gave an accuracy of 36% </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-6">
-                            <div class="card mb-4">
-                                <div class="card-header">
-                                    <i class="bi bi-grid-3x3-gap-fill"></i>
-                                    Confusion Matrix Cluster Centroid Resampling
-                                </div>
-                                <img src="static/images/confusion_matrix_cluster_centroid_cluster_centroid.png"
-                                    class="img-fluid" alt="Confusion Matrix">
-                                <div class="card-body">
-                                    <p class="card-text"> Cluster Centroid gave an accuracy of 51% </p>
                                 </div>
                             </div>
                         </div>

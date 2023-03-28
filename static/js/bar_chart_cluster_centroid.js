@@ -7,7 +7,9 @@ function init() {
         color: ['rgb(128, 0, 118)', 'rgb(	116, 214, 0)', 'rgb(253, 164, 0)']
       },
       type: "bar" }];
-      var layout = {};
+      var layout = {  title : "Cancer Incidence",
+      xaxis: {title: 'Cancer Recent Trend'},
+      yaxis: {title: 'Count'}};
       var config = {responsive: true};
     Plotly.newPlot("plot_cc", data, layout, config);
   }

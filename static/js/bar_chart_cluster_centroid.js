@@ -7,7 +7,9 @@ function init() {
         color: ['rgb(128, 0, 118)', 'rgb(	116, 214, 0)', 'rgb(253, 164, 0)']
       },
       type: "bar" }];
-    Plotly.newPlot("plot_cc", data);
+      var layout = {};
+      var config = {responsive: true};
+    Plotly.newPlot("plot_cc", data, layout, config);
   }
   
   // Call updatePlotly() when a change takes place to the DOM

@@ -33,8 +33,10 @@ d3.json("static/data/pm_df_01.json").then((importedData) => {
     yaxis: {title: 'PM Median Pred'}
   };
 
+  var config = {responsive: true};
+
   // Render the plot to the div tag with id "plot"
-  Plotly.newPlot("plot", trace1, layout);
+  Plotly.newPlot("plot", trace1, layout, config);
 });
 
 

@@ -54,29 +54,23 @@
         </div>
         <div id="layoutSidenav_content">
             <main>
-                <div class="container-fluid px-4">
-                    <h1 class="mt-4">Cancer Incidence and Environmental Pollutants</h1>
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                      <h1 class="display-4">Cancer Incidence and Environmental Pollutants</h1>
+                      <p class="lead">Creating a thriving and resilient community with machine-learning and data driven evidence.</p>
+                    </div>
+                  </div>
+                <!-- <div class="container-fluid px-4">
+                    <h1 class="mt-4"></h1>
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="card mb-4">
                                 <div class="card-body">
-                                    [Place Holder] Why we choose this project
-                                    A 2016 study out of Hong Kong, Cancer Mortality Risks From Long-term Exposure to
-                                    Ambient Fine Particle, showed that long-term exposure to pollution rates of PM2.5
-                                    (ambient fine particulate matter) is associated with a higher risk of cancer in
-                                    various organs. In fact, the study showed that every 10 µg/m3 of increased PM2.5
-                                    exposure increased the risk of dying from cancer by 22%.
-                                    While the cancer risk of air pollutants is considered a clear link, the link between
-                                    ozone exposure and cancer incidence isn't as straightforward. Studies show that
-                                    while ozone increases the risk of lung cancer, exposure does not increase the risk
-                                    or mortality of other cancers.
-                                    Our team's interest and experience in community health, and the environmental
-                                    concerns that affect it, are what led us to create this project. We have scaled the
-                                    data down to represent select counties in the United States.
+                                    <h4>This web application will allow you to explore the machine-learning model results through visualizations.</h4>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="card mb-4">
@@ -88,7 +82,7 @@
                                 </div> -->
                                 <div id="plot" style="width: 100%"></div>
 
-                                <div class="card-footer small text-muted">EPA</div>
+                                <div class="card-footer small text-muted">CDC-Daily PM2.5 Concentrations All County, 2001-2016</div>
                             </div>
                         </div>
                     </div>
@@ -103,10 +97,22 @@
                                 </div> -->
                                 <div id="plot1" style="width: 100%"></div>
 
-                                <div class="card-footer small text-muted">EPA</div>
+                                <div class="card-footer small text-muted">CDC-Daily County-Level Ozone Concentrations, 2001-2016</div>
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                The pollution and ozone datasets were broken down by year from 2001 to 2016.
+                                The cancer data set comprised a single “recent trend” data point per 
+                                FIPS based on data from 2000 to 2014. The years 2015 and 2016 were removed
+                                from the environmental data to create a cohesive dataset, then all three datasets were aggregated using 
+                                the pollution and ozone mean values by FIPS and year. 
+                                </div>
+                            </div>
+                        </div>
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="card mb-4">
@@ -143,20 +149,11 @@
                         <div class="col-md-12">
                             <div class="card mb-4">
                                 <div class="card-body">
-                                    [Place Holder] Why we choose this project
-                                    A 2016 study out of Hong Kong, Cancer Mortality Risks From Long-term Exposure to
-                                    Ambient Fine Particle, showed that long-term exposure to pollution rates of PM2.5
-                                    (ambient fine particulate matter) is associated with a higher risk of cancer in
-                                    various organs. In fact, the study showed that every 10 µg/m3 of increased PM2.5
-                                    exposure increased the risk of dying from cancer by 22%.
-                                    While the cancer risk of air pollutants is considered a clear link, the link between
-                                    ozone exposure and cancer incidence isn't as straightforward. Studies show that
-                                    while ozone increases the risk of lung cancer, exposure does not increase the risk
-                                    or mortality of other cancers.
-                                    Our team's interest and experience in community health, and the environmental
-                                    concerns that affect it, are what led us to create this project. We have scaled the
-                                    data down to represent select counties in the United States.
-
+                                The pollution and ozone datasets were broken down by year from 2001 to 2016.
+                                The cancer data set comprised a single “recent trend” data point per 
+                                FIPS based on data from 2000 to 2014. The years 2015 and 2016 were removed
+                                from the environmental data to create a cohesive dataset, then all three datasets were aggregated using 
+                                the pollution and ozone mean values by FIPS and year. 
                                 </div>
                             </div>
                         </div>
@@ -175,7 +172,7 @@
                                 </select></div>
                                 <div id="plot_bar"></div>
                                 <div class="card-body"></div>
-                                <div class="card-footer small text-muted">SMOTE</div>
+                                <div class="card-footer small text-muted">Kaggle-Cancer Mortality & Incidence Rates: (Country LVL)</div>
                             </div>
                             
                         </div>
@@ -207,7 +204,7 @@
                                 </select></div>
                                 <div id="plot_cc"></div>
                                 <div class="card-body"></div>
-                                <div class="card-footer small text-muted">Cluster Centroid</div>
+                                <div class="card-footer small text-muted">Kaggle-Cancer Mortality & Incidence Rates: (Country LVL)</div>
                             </div>
                         </div>
                         <div class="col">

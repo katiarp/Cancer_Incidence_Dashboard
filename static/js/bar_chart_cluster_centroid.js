@@ -2,7 +2,7 @@
 function init() {
     data = [{
       x: ["Stable", "Falling", "Rising"],
-      y: [2048, 168, 37],
+      y: [2048, 198, 43],
       marker:{
         color: ['rgb(128, 0, 118)', 'rgb(	116, 214, 0)', 'rgb(253, 164, 0)']
       },
@@ -30,7 +30,7 @@ function init() {
   
     if (dataset === 'dataset1') {
       x = ["Stable", "Falling", "Rising"];
-      y = [2048, 168, 37];
+      y = [2048, 198, 43];
     }
   
     else if (dataset === 'dataset2') {

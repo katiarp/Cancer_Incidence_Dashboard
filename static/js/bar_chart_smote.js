@@ -35,7 +35,7 @@ function init() {
   
     else if (dataset === 'dataset2') {
       x = ["Stable", "Falling", "Rising"];
-      y = [2048, 2048, 2048];
+      y = [1807, 1807, 1807];
     }
   
     // Note the extra brackets around 'x' and 'y'
